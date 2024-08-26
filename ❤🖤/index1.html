@@ -13,25 +13,64 @@
     <style>
 
         *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow: hidden; 
+
+    margin: 0;
+    padding: 0;
+    background-color: red; 
+    overflow: hidden;          
             
         }
+
+
+        .dis-sym {
+            box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white; 
+    background-color:transparent; 
+    color: white; 
+    text-align: center;
+    line-height: 20px; 
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    top: 200px;
+    transform: translateX(300px);
+    margin-left: 10%;
+
+
+}
+
+    .dis-sym p {
+    top: 0px; 
+}
+        
 
         .head{
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            width: 100vw;
+            width: 102vw;
             height: 50vh;
             background-color: red;
+
+            
         }
 
         .head h1{
             color: black;
+            transform: translateX(-10px);
+
         }
+
+        .dis{
+            color: white;
+            transform: translateY(180px);
+            margin-left: 37%;
+
+
+        }
+
 
         .para{
             width: 100vw;
@@ -71,12 +110,22 @@
 
 <body>
 
+    <div class="dis-sym">
+        <p>i</p>
+      </div>
+
+      <div class = "dis">
+        <p>I'm afraid and don't know what she'll say, but anyway let's GO </p>
+      </div>
+
     <div class="head">
-        <h1>WELCOME</h1>
+        <h1>WELCOME</h1>        
     </div>
 
+   
+
     <div class="para">
-        <p>HI I'M NIVESH ARN</p> 
+        <p>ME NIVESH ARN</p> 
         <button type="button" onclick="window.location.href='index2.html'">Click Me!</button>
     </div>
 
