@@ -53,6 +53,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            
         }
 
         .button button {
@@ -62,6 +63,8 @@
             padding: 10px 20px;
             cursor: pointer;
             font-size: 16px;
+            border-radius: 20%;
+
         }
 
         /* Futuristic arrow */
@@ -72,6 +75,7 @@
             position: relative;
             animation: pulse 2s infinite;
             top: -23px;
+
         }
 
         .down-arrow::before, .down-arrow::after {
@@ -141,7 +145,7 @@
     <div class="summa"></div>
     <div class="button">
         <div class="down-arrow"></div> 
-        <button id="downloadButton" onclick="window.location.href='index4.html'">Download Image</button>
+        <button id="downloadButton" onclick="window.location.href='index4.html'">Retrieve</button>
     </div>
 
     <button class="back-button" onclick="window.history.back();">

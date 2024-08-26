@@ -47,6 +47,13 @@ body {
     border-radius: 5px;
 }
 
+.error-message {
+    color: white;
+    font-size: medium;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
 .arrow-button {
     display: block;
     padding: 10px;
@@ -101,23 +108,47 @@ body {
 
 </style>
 
+<script>
+function checkPassword() {
+    const passwordInput = document.querySelector('.textbox').value;
+    const correctPassword = "1234"; // Replace with the actual password
+    const errorMessage = document.querySelector('.error-message');
+
+    if (passwordInput === correctPassword) {
+        window.location.href = 'index3.html';
+    } else {
+        errorMessage.style.display = 'block';
+    }
+}
+
+// Listen for the Enter key press
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        checkPassword();
+    }
+});
+</script>
+
 </head>
 <body>
     
     <div class="head">
-        <h1>Hey everyone, do you want crack the matter "Enter the password".</h1>
+        <h1>Hey everyone, do you want to crack the matter "Enter the password".</h1>
     </div>
 
     <div class="para">
         <input type="text" class="textbox" placeholder="Enter the password">
+        <p class="error-message">Incorrect password. Please try again.
+            If you need,📲 me (or) her
+        </p>
     </div>
 
-    <button class="arrow-button">
-        <span onclick="window.location.href='index3.html'">&rarr;</span>
+    <button class="arrow-button" onclick="checkPassword()">
+        &rarr;
     </button>
 
     <div class="her1">
-        <p>Please note that only she has the password. If you need it, 📲</p>
+        <p>Please note that only she has the password</p>
         <p>HINT: reply came for my proposal. (20.11.2022) (AM)</p>
     </div>
 
@@ -125,6 +156,5 @@ body {
         &#8592;
     </button>
     
-    <script src="pass.js"></script>
 </body>
 </html>
