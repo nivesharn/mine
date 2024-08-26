@@ -141,8 +141,11 @@
     <div class="head"></div>
     <div class="summa"></div>
     <div class="button">
-        <div class="down-arrow"></div> 
-        <button id="downloadButton" onclick="window.location.href='index4.html'">Retrieve</button>
+        <div class="down-arrow">
+            <!-- Hidden download link -->
+            <a id="downloadLink" href="1.png" download="1.png" style="display: none;"></a>
+        </div> 
+        <button id="retrieveButton">Retrieve</button>
     </div>
 
     <!-- Back button to go back to the previous page -->
@@ -150,11 +153,10 @@
         &#8592;
     </button>
 
-    <!-- Image download section -->
-    <div class="button">
-        <a href="path/to/your-image.jpg" download="downloaded-image.jpg">
-            <img src="path/to/your-image.jpg" alt="Downloadable Image" width="200">
-        </a>
-    </div>
+    <script>
+        document.getElementById('retrieveButton').addEventListener('click', function() {
+            document.getElementById('downloadLink').click();
+        });
+    </script>
 </body>
 </html>
