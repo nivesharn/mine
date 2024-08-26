@@ -72,7 +72,6 @@
             position: relative;
             animation: pulse 2s infinite;
             top: -23px;
-
         }
 
         .down-arrow::before, .down-arrow::after {
@@ -84,7 +83,6 @@
             border-radius: 10px;
             transition: 0.3s ease;
             box-shadow: 0 0 20px rgba(255, 0, 204, 0.7), 0 0 20px rgba(51, 51, 255, 0.7);
-
         }
 
         .down-arrow::before {
@@ -118,6 +116,24 @@
                 transform: scale(1);
             }
         }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
@@ -127,5 +143,9 @@
         <div class="down-arrow"></div> 
         <button id="downloadButton" onclick="window.location.href='index4.html'">Download Image</button>
     </div>
+
+    <button class="back-button" onclick="window.history.back();">
+        &#8592;
+    </button>
 </body>
 </html>
