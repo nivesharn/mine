@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1</title>
+    <title>Page 0</title>
     <style>
         /* Resetting margins and paddings */
         * {
@@ -12,23 +12,22 @@
             padding: 0;
         }
 
-        /* Set up the body to use block layout for vertical stacking */
+        /* Set up the body to use flexbox for horizontal layout */
         body {
+            display: flex;
             height: 100vh; /* Full viewport height */
         }
 
         /* The first section, red background */
         .head {
             background-color: red;
-            height: 50%; /* 50% height for half the screen */
-            width: 100%; /* Full width */
+            width: 50%; /* 50% width for half the screen */
         }
 
         /* The second section, black background */
         .para {
             background-color: black;
-            height: 50%; /* 50% height for half the screen */
-            width: 100%; /* Full width */
+            width: 50%; /* 50% width for half the screen */
         }
     </style>
 </head>
