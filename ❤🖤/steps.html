@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Button Example</title>
+    <style>
+        .menu-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-content {
+            display: none;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+        }
+
+        .menu-content.show {
+            display: block;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu-item:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-button" onclick="toggleMenu()">...</button>
+    <div class="menu-content" id="menuContent">
+        <a class="menu-item" href="index0.html">steps</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuContent = document.getElementById("menuContent");
+            menuContent.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

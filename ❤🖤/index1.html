@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..
-900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Page 1</title>
     <style>
         * {
@@ -42,7 +40,6 @@
             transform: translateX(109%);
             top: 203px;
             font-family: "SUSE", sans-serif;
-
         }
 
         .head {
@@ -53,14 +50,13 @@
             height: 50vh;
             background-color: red;
             font-family: "Protest Guerrilla", sans-serif;
-
         }
 
         .head h1 {
             color: black;
         }
 
-        .para{
+        .para {
             width: 100vw;
             height: 50vh;
             background-color: black;
@@ -71,7 +67,7 @@
             align-items: center;
         }
 
-        .para p{
+        .para p {
             color: red;
             font-size: large;
             height: 50vh;
@@ -92,11 +88,47 @@
             font-size: 25px;
         }
 
+        .menu-button {
+            background-color: black;
+            color: red;
+            font-size: 30px;
+            align-items: center;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .menu-content {
+            display: none;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+        }
+
+        .menu-content.show {
+            display: block;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu-item:hover {
+            text-decoration: underline;
+            color: blue;
+        }
     </style>
 </head>
-
 <body>
-
     <div class="dis-sym">
         <p>i</p>
     </div>
@@ -114,6 +146,29 @@
         <button type="button" onclick="window.location.href='index2.html'">Begin</button>
     </div>
 
-</body>
+    <button class="menu-button" onclick="toggleMenu()">...</button>
+    <div class="menu-content" id="menuContent">
+        <a class="menu-item" href="index0.html">steps</a>
+    </div>
 
+
+
+    <script>
+        var menuContent = document.getElementById("menuContent");
+        var menuButton = document.querySelector(".menu-button");
+    
+        function toggleMenu() {
+            menuContent.classList.add("show");
+        }
+    
+        document.addEventListener("click", function(event) {
+            var isClickInside = menuContent.contains(event.target) || menuButton.contains(event.target);
+            
+            if (!isClickInside) {
+                menuContent.classList.remove("show");
+            }
+        });
+    </script>
+    
+</body>
 </html>
