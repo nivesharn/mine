@@ -73,6 +73,17 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
             
         }
 
+        .hov:hover {
+            outline: 2px solid white;
+    outline-offset: 2px;
+    background-color: white;
+    backdrop-filter: blur(5px);
+    color: white;
+    color: red;
+        }
+
+        
+   
         /* Futuristic arrow */
         .down-arrow {
             margin-top: 20px;
@@ -83,6 +94,8 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
             top: -23px;
             font-family: "Bebas Neue", sans-serif;
         }
+
+        
 
         .down-arrow::before, .down-arrow::after {
             content: '';
@@ -154,7 +167,7 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
             <!-- Hidden download link -->
             <a id="downloadLink" href="1.png" download="1.png" style="display: none;"></a>
         </div> 
-        <button id="retrieveButton" onclick="window.location.href='index4.html'">Retrieve</button>
+        <button class="hov" id="retrieveButton" onclick="window.location.href='index4.html'">Retrieve</button>
     </div>
 
     <!-- Back button to go back to the previous page -->
