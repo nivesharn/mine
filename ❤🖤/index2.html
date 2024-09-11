@@ -118,24 +118,29 @@ body {
 </style>
 
 <script>
-function checkPassword() {
-    const passwordInput = document.querySelector('.textbox').value;
-    const correctPassword = "1234"; 
-    const errorMessage = document.querySelector('.error-message');
-
-    if (passwordInput === correctPassword) {
-        window.location.href = 'index3.html';
-    } else {
-        errorMessage.style.display = 'block';
+    function checkPassword() {
+        const passwordInput = document.querySelector('.textbox').value;
+        const correctPassword = "1234"; 
+        const errorMessage = document.querySelector('.error-message');
+    
+        if (passwordInput === "") {
+            errorMessage.textContent = "Please enter the password.";
+            errorMessage.style.display = 'block';
+        } else if (passwordInput === correctPassword) {
+            window.location.href = 'index3.html';
+        } else {
+            errorMessage.textContent = "Incorrect password. Please try again.";
+            errorMessage.style.display = 'block';
+        }
     }
-}
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        checkPassword();
-    }
-});
-</script>
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            checkPassword();
+        }
+    });
+    </script>
+    
 
 </head>
 <body>
@@ -146,9 +151,7 @@ document.addEventListener('keydown', function(event) {
 
     <div class="para">
         <input type="text" class="textbox" placeholder="Enter the password">
-        <p class="error-message">Incorrect password. Please try again.
-            
-        </p>
+        <p class="error-message">Incorrect password. Please try again.</p>
     </div>
 
     <button class="arrow-button" onclick="checkPassword()">
