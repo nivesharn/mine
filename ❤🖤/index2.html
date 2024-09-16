@@ -43,6 +43,7 @@ body {
     font-family: "SUSE", sans-serif;
 }
 
+
 .textbox {
     width: 30%;
     padding: 10px;
@@ -53,6 +54,7 @@ body {
     color: red;
     border-radius: 5px;
 }
+
 
 .error-message {
     color: white;
@@ -80,7 +82,8 @@ body {
 }
 
 .arrow-button:hover {
-    outline: 2px solid white;
+    outline: 2px solid w
+    hite;
     outline-offset: 2px;
     background-color: red;
     backdrop-filter: blur(5px);
@@ -133,7 +136,7 @@ body {
         const errorMessage = document.querySelector('.error-message');
     
         if (passwordInput === "") {
-            errorMessage.textContent = "Please enter the password.";
+            errorMessage.textContent = "Please provide the password.";
             errorMessage.style.display = 'block';
         } else if (passwordInput === correctPassword) {
             window.location.href = 'index3.html';
