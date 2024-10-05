@@ -4,164 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:
-    wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:
+wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Page 2</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
 
-    .head {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: 100vw;
-        height: 35vh;
-        background-color: black;
-        color: red;
-        font-family: "Bungee Tint", sans-serif;
-        font-size: small;
-        padding: 10px; /* Padding for better mobile spacing */
-        text-align: center;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
-    .head h1 {
-        font-size: 22px; /* Adjusted font size for mobile */
-    }
+.head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+    background-color: black;
+    color: red;
+    font-family: "Bungee Tint", sans-serif;
+    font-size: small;
+}
 
-    .para {
-        color: black;
-        height: 35vh;
-        background-color: red;
-        text-align: center;
-        padding: 20px;
-        font-family: "SUSE", sans-serif;
-    }
+.head h1 {
+    height: 8vh;
+}
 
-    .textbox {
-        width: 80%; /* Adjusted width for mobile */
-        padding: 10px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        border: 1px solid black;
-        background-color: black;
-        color: red;
-        border-radius: 5px;
-        font-size: 16px; /* Larger font for better readability on mobile */
-    }
+.para {
+    color: black;
+    height: 50vh;
+    background-color: red;
+    text-align: center;
+    padding-top: 20px; 
+    font-family: "SUSE", sans-serif;
+}
 
-    .error-message {
-        color: white;
-        font-size: small;
-        margin-top: 10px;
-        display: none;
-    }
 
-    .arrow-button {
-        padding: 10px;
-        margin: 20px auto; 
-        display: block;
-        background-color: black;
-        color: red;
-        font-size: 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        text-align: center;
-    }
+.textbox {
+    width: 30%;
+    padding: 10px;
+    margin: 0 auto; 
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: black;
+    color: red;
+    border-radius: 5px;
+}
 
-    .arrow-button:hover {
-        outline: 2px solid white;
-        background-color: white;
-        color: red;
-    }
 
-    .her1 {
-        text-align: center;
-        padding: 10px;
-        font-family: "SUSE", sans-serif;
-    }
+.error-message {
+    color: white;
+    font-size: medium;
+    margin-top: 10px;
+    display: none; 
+}
 
-    .her1 p {
-        color: white;
-        font-size: 14px;
-        margin-top: 10px;
-        padding: 0 15px; /* Padding to add spacing for mobile */
-    }
+.arrow-button {
+    display: block;
+    padding: 10px;
+    margin: 0 auto; 
+    box-sizing: border-box;
+    background-color: black;
+    color: red;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transform: translateY(-322px);
+    margin-left: 67%;    
+    padding-bottom: -10%;
+    font-size: 18px;
+}
 
-    .back-button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 20px;
-        color: white;
-        background-color: black;
-        padding: 10px;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+.arrow-button:hover {
+    outline: 2px solid w
+    hite;
+    outline-offset: 2px;
+    background-color: white;
+    backdrop-filter: blur(5px);
+    color: white;
+    color:red;
+}
 
-    .back-button:hover {
-        background-color: #333;
-    }
+.her1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    @media (max-width: 768px) {
-        .head h1 {
-            font-size: 18px; /* Adjusted for smaller screens */
-        }
+.her1 p {
+    color: white;
+    font-size: medium;
+    text-align: center;
+    transform: translateY(-150px);
+    margin-bottom: 0%;
+    overflow: hidden;
+    font-family: "SUSE", sans-serif;
+}
 
-        .textbox {
-            width: 90%; /* Further adjusted for smaller screens */
-            font-size: 14px;
-        }
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .arrow-button {
-            font-size: 18px;
-        }
-
-        .her1 p {
-            font-size: 12px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .head {
-            height: 30vh; /* Reduced height for very small screens */
-        }
-
-        .head h1 {
-            font-size: 16px; /* Reduced for mobile */
-        }
-
-        .para {
-            height: 30vh; /* Adjusted for mobile */
-        }
-
-        .textbox {
-            width: 95%; /* Full width for very small screens */
-        }
-
-        .arrow-button {
-            font-size: 16px;
-        }
-
-        .her1 p {
-            font-size: 10px; /* Reduced font for very small screens */
-        }
-
-        .back-button {
-            font-size: 18px;
-        }
-    }
+.back-button:hover {
+    background-color: #333;
+}
 
 </style>
 
@@ -181,13 +145,14 @@
             errorMessage.style.display = 'block';
         }
     }
-
+    
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             checkPassword();
         }
     });
-</script>
+    </script>
+    
 
 </head>
 <body>

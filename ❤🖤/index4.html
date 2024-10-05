@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Kalnia+Glaze:wght@100..700&family=Protest+Guerrilla&family=Rock+Salt&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:
+wght@100..900&family=Kalnia+Glaze:wght@100..700&family=Protest+Guerrilla&family=Rock+Salt&family=SUSE:
+wght@100..800&display=swap" rel="stylesheet">
     <title>Page 4</title>
     <style>
         body {
@@ -105,44 +107,6 @@
         .goog-te-gadget {
             display: inline-block !important;
         }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .she {
-                font-size: 2.5em;
-            }
-
-            .head {
-                width: 130vw;
-                height: 130vh;
-            }
-
-            .summa {
-                width: 180vw;
-                height: 180vh;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .she {
-                font-size: 2em;
-            }
-
-            .head {
-                width: 110vw;
-                height: 110vh;
-            }
-
-            .summa {
-                width: 150vw;
-                height: 150vh;
-            }
-
-            .language-selector {
-                top: 5px;
-                right: 5px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -156,14 +120,14 @@
     <div class="summa"></div>
     <div class="she">
         " She is mine, I'm hers . "
-    </div>
+        </div>
 
     <!-- Google Translate API Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'ta,te,hi,ml,en',
+                includedLanguages: 'ta,te,hi,ml,en', // Added 'ml' for Malayalam, reordered languages
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
@@ -171,12 +135,13 @@
             // Check if a language has been selected and stored in local storage
             var selectedLang = localStorage.getItem('selectedLanguage');
             if (selectedLang) {
+                // Simulate the selection of the language
                 var translateDropdown = document.querySelector('.goog-te-combo');
                 translateDropdown.value = selectedLang;
                 translateDropdown.dispatchEvent(new Event('change'));
             }
 
-            reorderTranslateDropdown();
+            reorderTranslateDropdown(); // Call function to reorder dropdown
         }
 
         function storeLanguageSelection() {
@@ -189,7 +154,7 @@
 
         function reorderTranslateDropdown() {
             var translateDropdown = document.querySelector('.goog-te-combo');
-            var order = ['ta', 'te', 'hi', 'ml', 'en'];
+            var order = ['ta', 'te', 'hi', 'ml', 'en']; // Desired order of languages
 
             for (var i = 0; i < order.length; i++) {
                 for (var j = 0; j < translateDropdown.options.length; j++) {

@@ -19,20 +19,22 @@
 
         body {
             display: flex;
-            flex-direction: column;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
         }
 
         .head {
             background-color: black;
-            width: 100%;
+            width: 50%;
             padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: white;
+        }
+
+        .head p {
+            margin-bottom: 15px;
         }
 
         .steps {
@@ -44,26 +46,21 @@
         }
 
         .para {
-            background-color: red;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background-color: red   ;
+            width: 50%;
         }
 
         .para button {
-            padding: 15px;
-            font-size: 22px;
+            padding: 10px;
+            font-size: 25px;
             background-color: black;
             color: white;
             border-radius: 10px;
             border: none;
             cursor: pointer;
             font-family: "Bebas Neue", sans-serif;
-            width: 100%;
-            max-width: 250px;
-            text-align: center;
+            margin-top: 270px;
+            transform: translateX(280px);
         }
 
         .para button:hover {
@@ -80,15 +77,14 @@
             font-size: 18px;
             color: #333;
             background-color: #fff;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
+            max-width: 400px;
+            margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin: 20px auto;
-            max-width: 100%;
-            width: 90%;
+            gap: 10px;
         }
 
         .contact-info a {
@@ -104,30 +100,12 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 16px;
+            font-size: 18px;
             color: #333;
         }
 
         .contact-info .icon-link i {
             font-size: 24px;
-        }
-
-        /* Mobile optimization for screens smaller than 480px */
-        @media (max-width: 480px) {
-            .contact-info {
-                padding: 10px;
-                font-size: 14px;
-            }
-
-            .contact-info .icon-link i {
-                font-size: 20px;
-            }
-
-            .para button {
-                font-size: 18px;
-                padding: 12px;
-                max-width: 100%;
-            }
         }
     </style>
 </head>
@@ -147,7 +125,7 @@
             </div>
             <div class="icon-link">
                 <i class="fab fa-instagram"></i>
-                <a href="https://www.instagram.com/direct/t/17847226058623878/" target="_blank">@______.nivesh_arn.______</a>
+                <a href="https://www.instagram.com/direct/t/17847226058623878/" target="_blank"> @______.nivesh_arn.______</a>
             </div>
         </div>
     </div>
