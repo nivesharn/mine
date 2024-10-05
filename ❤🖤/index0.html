@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..
-900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Page 0</title>
     <style>
         * {
@@ -19,6 +18,7 @@
 
         body {
             display: flex;
+            flex-direction: row;
             height: 100vh;
             margin: 0;
         }
@@ -36,20 +36,24 @@
         .head p {
             margin-bottom: 15px;
         }
-        .steps{
+
+        .steps {
             padding: 20px;
             color: black;
             border-radius: 10px;
-            font-size:20px;
+            font-size: 20px;
             font-family: "SUSE", sans-serif;
-
         }
 
         .para {
             background-color: black;
             width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .para button{
+
+        .para button {
             padding: 10px;
             font-size: 25px;
             background-color: red;
@@ -58,39 +62,70 @@
             border: none;
             cursor: pointer;
             font-family: "Bebas Neue", sans-serif;
-            margin-top: 270px;
-            transform: translateX(280px);
-
+            transform: translateX(100px);
         }
-        .para button:hover{
+
+        .para button:hover {
             background-color: white;
             color: black;
         }
-        .para button:active{
+
+        .para button:active {
             background-color: red;
             color: white;
         }
-          
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .head,
+            .para {
+                width: 100%;
+            }
+
+            .para button {
+                transform: none;
+                margin-top: 20px;
+            }
+
+            .steps {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .steps {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .para button {
+                padding: 8px;
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="head">
         <div class="steps">
-        <p>1. Carefully review each page (including this page) as you navigate through them.</p>
-        <p>2. Ensure that you understand all the details before proceeding.</p>
-        <p>3. Click the "Retrieve" button once you have completed all the requirements. This will take you to the next page.</p>
-        <p>4. On the final page, an image will be automatically downloaded.</p>
-        <p>5. You need to read the content displayed on the page. then open the downloaded image to view it.</p>
-        <p>6. If you'd like to review the instructions and contact Me, please click on the "Menu Bar" option on the main page. This will take you back.</p>
-        <p>7. If you have any questions or need further assistance, please tap on the "Menu Bar" on the main page. You'll find contact information there.</p>
+            <p>1. Carefully review each page (including this page) as you navigate through them.</p>
+            <p>2. Ensure that you understand all the details before proceeding.</p>
+            <p>3. Click the "Retrieve" button once you have completed all the requirements. This will take you to the next page.</p>
+            <p>4. On the final page, an image will be automatically downloaded.</p>
+            <p>5. You need to read the content displayed on the page. Then open the downloaded image to view it.</p>
+            <p>6. If you'd like to review the instructions and contact me, please click on the "Menu Bar" option on the main page. This will take you back.</p>
+            <p>7. If you have any questions or need further assistance, please tap on the "Menu Bar" on the main page. You'll find contact information there.</p>
         </div>
     </div>
     <div class="para">
         <button type="button" onclick="window.location.href='index1.html'">You may</button>
-
     </div>
-
 </body>
 
 </html>
