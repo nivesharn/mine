@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <title>Page 0</title>
+    <link rel="icon" href="1.png">
+    <title>Mobile Page</title>
     <style>
         * {
             margin: 0;
@@ -18,15 +19,16 @@
 
         body {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
+            background-color: #f0f0f0;
         }
 
         .head {
             background-color: red;
-            width: 50%;
-            padding: 20px;
+            width: 100%;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,35 +36,39 @@
         }
 
         .head p {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
         }
 
         .steps {
-            padding: 20px;
+            padding: 15px;
             color: black;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 16px;
             font-family: "SUSE", sans-serif;
+            background-color: white;
         }
 
         .para {
             background-color: black;
-            width: 50%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px;
         }
 
         .para button {
-            padding: 10px;
-            font-size: 25px;
+            padding: 12px;
+            font-size: 18px;
             background-color: red;
             color: white;
-            border-radius: 10px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
             font-family: "Bebas Neue", sans-serif;
-            transform: translateX(100px);
+            width: 100%;
+            max-width: 200px;
         }
 
         .para button:hover {
@@ -75,37 +81,24 @@
             color: white;
         }
 
-        /* Responsive styling for smaller screens */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-
-            .head,
-            .para {
-                width: 100%;
-            }
-
-            .para button {
-                transform: none;
-                margin-top: 20px;
-            }
-
-            .steps {
-                font-size: 18px;
+        /* For devices with screen width smaller than 480px */
+        @media (max-width: 480px) {
+            .head {
                 padding: 15px;
             }
-        }
 
-        @media (max-width: 480px) {
+            .head p {
+                font-size: 12px;
+            }
+
             .steps {
-                font-size: 16px;
                 padding: 10px;
+                font-size: 14px;
             }
 
             .para button {
-                padding: 8px;
-                font-size: 20px;
+                padding: 10px;
+                font-size: 16px;
             }
         }
     </style>

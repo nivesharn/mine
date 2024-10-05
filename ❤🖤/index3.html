@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:
-wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Page 3</title>
     <style>
         body {
@@ -54,7 +53,7 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
         .button {
             z-index: 2;
             position: relative;
-            margin-top: 50px;
+            margin-top: 30px;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -65,69 +64,60 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
             background-color: black;
             color: red;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             cursor: pointer;
-            font-size: 23px;
-            border-radius: 20%;
+            font-size: 20px;
+            border-radius: 15%;
             font-family: "Bebas Neue", sans-serif;
-            
         }
 
         .hov:hover {
             outline: 2px solid white;
-    outline-offset: 2px;
-    background-color: white;
-    backdrop-filter: blur(5px);
-    color: white;
-    color: black;
+            outline-offset: 2px;
+            background-color: white;
+            backdrop-filter: blur(5px);
+            color: black;
         }
 
-        
-   
-        /* Futuristic arrow */
         .down-arrow {
-            margin-top: 20px;
-            width: 50px;
-            height: 50px;
+            margin-top: 15px;
+            width: 40px;
+            height: 40px;
             position: relative;
             animation: pulse 2s infinite;
-            top: -23px;
+            top: -15px;
             font-family: "Bebas Neue", sans-serif;
         }
-
-        
 
         .down-arrow::before, .down-arrow::after {
             content: '';
             position: absolute;
-            width: 50px;
-            height: 10px;
+            width: 40px;
+            height: 8px;
             background: linear-gradient(45deg, #ff00cc, #3333ff);
-            border-radius: 10px;
+            border-radius: 8px;
             transition: 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 0, 204, 0.7), 0 0 20px rgba(51, 51, 255, 0.7);
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.7), 0 0 15px rgba(51, 51, 255, 0.7);
         }
 
         .down-arrow::before {
-            top: 20px;
+            top: 15px;
             left: 0;
             transform: rotate(45deg);
             transform-origin: left;
         }
 
         .down-arrow::after {
-            top: 20px;
+            top: 15px;
             right: 0;
             transform: rotate(-45deg);
             transform-origin: right;
         }
 
-        .down-arrow:hover::before,
-        .down-arrow:hover::after {
-            box-shadow: 0 0 25px rgba(255, 0, 204, 0.9), 0 0 25px rgba(51, 51, 255, 0.9);
+        .down-arrow:hover::before, .down-arrow:hover::after {
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.9), 0 0 20px rgba(51, 51, 255, 0.9);
         }
 
-        /* Pulsing animation */
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -142,12 +132,12 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
 
         .back-button {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 30px;
+            top: 10px;
+            left: 10px;
+            font-size: 25px;
             color: white;
             background-color: black;
-            padding: 10px;
+            padding: 8px;
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -157,6 +147,71 @@ wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" r
         .back-button:hover {
             background-color: #333;
         }
+
+        @media (max-width: 768px) {
+            .head {
+                width: 130vw;
+                height: 130vh;
+            }
+
+            .summa {
+                width: 180vw;
+                height: 180vh;
+            }
+
+            .button button {
+                font-size: 18px;
+                padding: 7px 12px;
+            }
+
+            .down-arrow {
+                width: 35px;
+                height: 35px;
+            }
+
+            .down-arrow::before, .down-arrow::after {
+                width: 35px;
+                height: 6px;
+            }
+
+            .back-button {
+                font-size: 22px;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head {
+                width: 110vw;
+                height: 110vh;
+            }
+
+            .summa {
+                width: 150vw;
+                height: 150vh;
+            }
+
+            .button button {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+
+            .down-arrow {
+                width: 30px;
+                height: 30px;
+            }
+
+            .down-arrow::before, .down-arrow::after {
+                width: 30px;
+                height: 5px;
+            }
+
+            .back-button {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+
     </style>
 </head>
 <body>
