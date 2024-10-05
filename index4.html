@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Kalnia+Glaze:wght@100..700&family=Protest+Guerrilla&family=Rock+Salt&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>Page 4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-45deg);
+            width: 150vw;
+            height: 150vh;
+            background-color: black;
+            position: absolute;
+            right: -50vw;
+            top: -25vh;
+            z-index: 1;
+        }
+
+        .summa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-29deg);
+            width: 200vw;
+            height: 200vh;
+            background-color: red;
+            position: absolute;
+            right: -60vw;
+            top: -70vh;
+            z-index: 0;
+            color: red;
+        }
+
+        .she {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5em;
+            font-weight: bold;
+            animation: zoomInOut 4s infinite, colorChange 4s infinite;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: red;
+            font-family: "Rock Salt", cursive;
+        }
+
+        @keyframes zoomInOut {
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes colorChange {
+            0%   {color: red;}
+            25%  {color: yellow;}
+            50%  {color: violet;}
+            75%  {color: orange;}
+            100% {color: white;}
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+        }
+
+        /* Hide Google Translate logo */
+        .goog-logo-link {
+            display: none !important;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        .goog-te-gadget {
+            display: inline-block !important;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .she {
+                font-size: 2.5em;
+            }
+
+            .head {
+                width: 130vw;
+                height: 130vh;
+            }
+
+            .summa {
+                width: 180vw;
+                height: 180vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .she {
+                font-size: 2em;
+            }
+
+            .head {
+                width: 110vw;
+                height: 110vh;
+            }
+
+            .summa {
+                width: 150vw;
+                height: 150vh;
+            }
+
+            .language-selector {
+                top: 5px;
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <label for="language-select" style="color: black;">Choose your language:</label>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="head"></div>
+    <div class="summa"></div>
+    <div class="she">
+        " She is mine, I'm hers . "
+    </div>
+
+    <!-- Google Translate API Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ta,te,hi,ml,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+
+            // Check if a language has been selected and stored in local storage
+            var selectedLang = localStorage.getItem('selectedLanguage');
+            if (selectedLang) {
+                var translateDropdown = document.querySelector('.goog-te-combo');
+                translateDropdown.value = selectedLang;
+                translateDropdown.dispatchEvent(new Event('change'));
+            }
+
+            reorderTranslateDropdown();
+        }
+
+        function storeLanguageSelection() {
+            var translateDropdown = document.querySelector('.goog-te-combo');
+            translateDropdown.addEventListener('change', function () {
+                var selectedLang = translateDropdown.value;
+                localStorage.setItem('selectedLanguage', selectedLang);
+            });
+        }
+
+        function reorderTranslateDropdown() {
+            var translateDropdown = document.querySelector('.goog-te-combo');
+            var order = ['ta', 'te', 'hi', 'ml', 'en'];
+
+            for (var i = 0; i < order.length; i++) {
+                for (var j = 0; j < translateDropdown.options.length; j++) {
+                    if (translateDropdown.options[j].value === order[i]) {
+                        translateDropdown.appendChild(translateDropdown.options[j]);
+                        break;
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            storeLanguageSelection();
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

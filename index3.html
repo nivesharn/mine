@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>Page 3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-45deg);
+            width: 150vw;
+            height: 150vh;
+            background-color: red;
+            position: absolute;
+            right: -50vw;
+            top: -25vh;
+            z-index: 1;
+        }
+
+        .summa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-29deg);
+            width: 200vw;
+            height: 200vh;
+            background-color: black;
+            position: absolute;
+            right: -60vw;
+            top: -70vh;
+            z-index: 0;
+            color: red;
+        }
+
+        .button {
+            z-index: 2;
+            position: relative;
+            margin-top: 30px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button button {
+            background-color: black;
+            color: red;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 15%;
+            font-family: "Bebas Neue", sans-serif;
+        }
+
+        .hov:hover {
+            outline: 2px solid white;
+            outline-offset: 2px;
+            background-color: white;
+            backdrop-filter: blur(5px);
+            color: black;
+        }
+
+        .down-arrow {
+            margin-top: 15px;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            animation: pulse 2s infinite;
+            top: -15px;
+            font-family: "Bebas Neue", sans-serif;
+        }
+
+        .down-arrow::before, .down-arrow::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            border-radius: 8px;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.7), 0 0 15px rgba(51, 51, 255, 0.7);
+        }
+
+        .down-arrow::before {
+            top: 15px;
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: left;
+        }
+
+        .down-arrow::after {
+            top: 15px;
+            right: 0;
+            transform: rotate(-45deg);
+            transform-origin: right;
+        }
+
+        .down-arrow:hover::before, .down-arrow:hover::after {
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.9), 0 0 20px rgba(51, 51, 255, 0.9);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+            padding: 8px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .head {
+                width: 130vw;
+                height: 130vh;
+            }
+
+            .summa {
+                width: 180vw;
+                height: 180vh;
+            }
+
+            .button button {
+                font-size: 18px;
+                padding: 7px 12px;
+            }
+
+            .down-arrow {
+                width: 35px;
+                height: 35px;
+            }
+
+            .down-arrow::before, .down-arrow::after {
+                width: 35px;
+                height: 6px;
+            }
+
+            .back-button {
+                font-size: 22px;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head {
+                width: 110vw;
+                height: 110vh;
+            }
+
+            .summa {
+                width: 150vw;
+                height: 150vh;
+            }
+
+            .button button {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+
+            .down-arrow {
+                width: 30px;
+                height: 30px;
+            }
+
+            .down-arrow::before, .down-arrow::after {
+                width: 30px;
+                height: 5px;
+            }
+
+            .back-button {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="summa"></div>
+    <div class="button">
+        <div class="down-arrow">
+            <!-- Hidden download link -->
+            <a id="downloadLink" href="1.png" download="1.png" style="display: none;"></a>
+        </div> 
+        <button class="hov" id="retrieveButton" onclick="window.location.href='index4.html'">Retrieve</button>
+    </div>
+
+    <!-- Back button to go back to the previous page -->
+    <button class="back-button" onclick="window.history.back();">
+        &#8592;
+    </button>
+
+    <script>
+        document.getElementById('retrieveButton').addEventListener('click', function() {
+            document.getElementById('downloadLink').click();
+        });
+    </script>
+</body>
+</html>
