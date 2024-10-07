@@ -14,6 +14,34 @@
             overflow: hidden;
         }
 
+
+        /* Responsive media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Flexbox or grid adjustments for flexible layouts */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+
         .dis-sym {
             box-sizing: border-box;
             width: 24px;
