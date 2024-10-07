@@ -9,115 +9,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Handjet:wght@100..900&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <link rel="icon" href="1.png">
     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    width: 100vw; /* Ensure full width view on all devices */
-    height: 100vh; /* Full height */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+      body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
-    max-width: 1200px; /* Fixed width to match desktop */
-    margin: 0 auto; /* Center the content */
+  display: flex;
+  flex-direction: row; /* Change to column for mobile */
+  justify-content: space-between; /* Adjust spacing as needed */
+  align-items: center; /* Vertically center content */
+  height: 100%; /* Optional for full screen height */
+  padding: 20px;
 }
 
-
-h1, h2, p {
-    font-size: 2vw; /* Use viewport units for responsive font size */
+.head {
+  background-color: red;
+  padding: 20px;
+  color: white;
+  flex: 1; /* Allow content to grow/shrink within container */
 }
 
-img {
-    width: 100%;
-    height: auto; /* Ensure images scale */
+.head p {
+  margin-bottom: 15px;
 }
 
+.steps {
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "SUSE", sans-serif;
+}
 
-        .head {
-            background-color: red;
-            width: 50%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
-        }
+.para {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allow content to grow/shrink within container */
+}
 
-        .head p {
-            margin-bottom: 15px;
-        }
+.para button {
+  padding: 10px;
+  font-size: 25px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+}
 
-        .steps {
-            padding: 20px;
-            color: black;
-            border-radius: 10px;
-            font-size: 20px;
-            font-family: "SUSE", sans-serif;
-        }
+.para button:hover {
+  background-color: white;
+  color: black;
+}
 
-        .para {
-            background-color: black;
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.para button:active {
+  background-color: red;
+  color: white;
+}
 
-        .para button {
-            padding: 10px;
-            font-size: 25px;
-            background-color: red;
-            color: white;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            font-family: "Bebas Neue", sans-serif;
-            transform: translateX(100px);
-        }
+/* Responsive Media Queries */
 
-        .para button:hover {
-            background-color: white;
-            color: black;
-        }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: flex-start; /* Align content to top on mobile */
+  }
 
-        .para button:active {
-            background-color: red;
-            color: white;
-        }
+  .head,
+  .para {
+    padding: 15px;
+  }
 
-        /* Responsive styling for smaller screens */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
+  .steps {
+    font-size: 18px;
+  }
 
-            .head,
-            .para {
-                width: 100%;
-            }
+  .para button {
+    margin-top: 20px;
+  }
+}
 
-            .para button {
-                transform: none;
-                margin-top: 20px;
-            }
+@media (max-width: 480px) {
+  .steps {
+    font-size: 16px;
+  }
 
-            .steps {
-                font-size: 18px;
-                padding: 15px;
-            }
-        }
+  .para button {
+    padding: 8px;
+    font-size: 20px;
+  }
+}
 
-        @media (max-width: 480px) {
-            .steps {
-                font-size: 16px;
-                padding: 10px;
-            }
-
-            .para button {
-                padding: 8px;
-                font-size: 20px;
-            }
-        }
     </style>
 </head>
 
